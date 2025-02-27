@@ -16,27 +16,27 @@ module.exports.removeFromLikedMovies = async (req, res) => {
     try {
         const { email, movieId } = req.body;
         const user = await User.findOne({ email });
-        if (user) {
-            const movies = user.likedMovies;
-            const movieIndex = movies.findIndex(({id}) => id === movieId);
-            if (!movieIndex) {
-                res.status(400).send({msg: "Movie not found."});
-            }
-            movies.splice(movieIndex, 1);
-            await User.findByIdAndUpdate(
-                user._id,
-                {
-                    likedMovies: movies,
-                },
-                {new: true}
-            );
-            return res.json({msg: "Movie successfully removed.", movies});
-        } else return res.json({ msg: "User with given email not found." });
+        if (!user) {
+            return res.status(404).json({ msg: "User not found." });
+        }
+
+        // Use $pull to remove only the movie with the given id
+        const updatedUser = await User.findOneAndUpdate(
+            { email },
+            { $pull: { likedMovies: { id: movieId } } },
+            { new: true }
+        );
+
+        // If no movie was removed, updatedUser will still be truthy.
+        // You might check if the likedMovies array length changed if needed.
+        return res.json({ msg: "Movie successfully removed.", movies: updatedUser.likedMovies });
     } catch (error) {
-        console.log(error);
-        return res.json({ msg: "Error removing movie to the liked list" });
+        console.error("Error removing movie:", error);
+        return res.status(500).json({ msg: "Error removing movie from liked list." });
     }
 };
+
+
 
 module.exports.addToLikedMovies = async (req, res) => {
     try {
