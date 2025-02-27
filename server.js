@@ -1,6 +1,6 @@
-import express from "express";
-import cors from "cors";
-import * as mongoose from "mongoose";
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
 const userRoutes = require("./routes/user-routes.js");
 
 const app = express();
