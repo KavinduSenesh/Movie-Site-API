@@ -12,7 +12,7 @@ Movie Site API is a backend service built using Node.js, Express, and TypeScript
 ## Technologies Used
 - Node.js
 - Express.js
-- TypeScript
+- JavaScript
 - MongoDB (if applicable)
 
 ## Folder Structure
