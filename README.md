@@ -1,7 +1,7 @@
 # Movie Site API
 
 ## Overview
-Movie Site API is a backend service built using Node.js, Express, and TypeScript. It provides endpoints for user authentication and movie-related data management.
+Movie Site API is a backend service built using Node.js, Express, and javaScript. It provides endpoints for user authentication and movie-related data management.
 
 ## Features
 - User authentication (Sign up, Login)
