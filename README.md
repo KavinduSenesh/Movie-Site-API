@@ -1,72 +1,53 @@
-# Movie Site API
+# React Native News App
 
-## Overview
-Movie Site API is a backend service built using Node.js, Express, and JavaScript. It provides endpoints for user authentication and movie-related data management.
+A simple and responsive React Native application that fetches and displays the latest news from an API. Built with **React Native, TypeScript, and Redux**, this app provides a clean UI and smooth user experience.
 
-## Features
-- User authentication (Sign up, Login)
-- Secure API routes
-- Movie-related CRUD operations
-- Organized project structure following MVC pattern
+## 🚀 Features
 
-## Technologies Used
-- Node.js
-- Express.js
-- JavaScript
-- MongoDB (if applicable)
+- 📢 Fetches the latest news dynamically.
+- 🔍 Search functionality to find specific news articles.
+- ⚡ Optimized performance using Redux.
+- 🌍 Supports multiple news sources.
 
-## Folder Structure
-```
-Movie-Site-API/
-├── controllers/
-│   ├── user-controllers.js
-├── models/
-│   ├── user-models.js
-├── routes/
-│   ├── user-routes.js
-├── node_modules/  # Dependencies
-├── package.json   # Project metadata
-├── package-lock.json  # Dependency lock file
-├── server.ts      # Entry point
-├── tsconfig.json  # TypeScript configuration
-```
+## 🛠️ Tech Stack
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/KavinduSenesh/Movie-Site-API.git
-   ```
-2. Navigate to the project folder:
-   ```sh
-   cd Movie-Site-API
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
+- **React Native** – Cross-platform mobile app framework.
+- **TypeScript** – Statically typed JavaScript.
+- **Redux** – State management.
+- **React Navigation** – Smooth app navigation.
+- **Axios** – Fetching data from the news API.
 
-## Usage
-### Running the Server
-To start the server, use:
+## 🏠 Installation
+
+### 1️⃣ Clone the repository  
 ```sh
-npm start
+git clone https://github.com/KavinduSenesh/react-native-news-app.git
+cd react-native-news-app
 ```
 
-If using TypeScript, run:
+### 2️⃣ Install dependencies  
 ```sh
-npm run dev
+npm install
 ```
 
-## API Endpoints
-| Method | Endpoint        | Description             |
-|--------|----------------|-------------------------|
-| GET    | /api/movies       | Get all movies        |
-| POST   | /api/movies       | Add a new movie       |
-| DELETE | /api/movies/:id   | Remove a movie        |
+### 3️⃣ Run the app  
+For Android:
+```sh
+npx react-native run-android
+```
 
-## Contribution
-Feel free to fork the repository and submit pull requests!
+## 🔑 API Configuration
+This app fetches news from an API. To configure it:
+1. Get an API key from [NewsAPI](https://newsapi.org/).
+   ```
+2. Restart the app.
 
-## License
-This project is licensed under the MIT License.
+## 🐟 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+💡 **Contributions & Issues**  
+Feel free to contribute by opening a pull request! If you find any bugs, report them in the **Issues** section. 🚀
 
