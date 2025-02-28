@@ -1,53 +1,72 @@
-# React Native News App
+# Movie Site API
 
-A simple and responsive React Native application that fetches and displays the latest news from an API. Built with **React Native, TypeScript, and Redux**, this app provides a clean UI and smooth user experience.
+## Overview
+Movie Site API is a backend service built using Node.js, Express, and TypeScript. It provides endpoints for user authentication and movie-related data management.
 
-## 🚀 Features
+## Features
+- User authentication (Sign up, Login)
+- Secure API routes
+- Movie-related CRUD operations
+- Organized project structure following MVC pattern
 
-- 📢 Fetches the latest news dynamically.
-- 🔍 Search functionality to find specific news articles.
-- ⚡ Optimized performance using Redux.
-- 🌍 Supports multiple news sources.
+## Technologies Used
+- Node.js
+- Express.js
+- JavaScript
+- MongoDB (if applicable)
 
-## 🛠️ Tech Stack
-
-- **React Native** – Cross-platform mobile app framework.
-- **TypeScript** – Statically typed JavaScript.
-- **Redux** – State management.
-- **React Navigation** – Smooth app navigation.
-- **Axios** – Fetching data from the news API.
-
-## 🏠 Installation
-
-### 1️⃣ Clone the repository  
-```sh
-git clone https://github.com/KavinduSenesh/react-native-news-app.git
-cd react-native-news-app
+## Folder Structure
+```
+Movie-Site-API/
+├── controllers/
+│   ├── user-controllers.js
+├── models/
+│   ├── user-models.js
+├── routes/
+│   ├── user-routes.js
+├── node_modules/  # Dependencies
+├── package.json   # Project metadata
+├── package-lock.json  # Dependency lock file
+├── server.ts      # Entry point
+├── tsconfig.json  # TypeScript configuration
 ```
 
-### 2️⃣ Install dependencies  
-```sh
-npm install
-```
-
-### 3️⃣ Run the app  
-For Android:
-```sh
-npx react-native run-android
-```
-
-## 🔑 API Configuration
-This app fetches news from an API. To configure it:
-1. Get an API key from [NewsAPI](https://newsapi.org/).
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/KavinduSenesh/Movie-Site-API.git
    ```
-2. Restart the app.
+2. Navigate to the project folder:
+   ```sh
+   cd Movie-Site-API
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-## 🐟 License
+## Usage
+### Running the Server
+To start the server, use:
+```sh
+npm start
+```
 
-This project is licensed under the [MIT License](LICENSE).
+If using TypeScript, run:
+```sh
+npm run dev
+```
 
----
+## API Endpoints
+| Method | Endpoint        | Description             |
+|--------|----------------|-------------------------|
+| GET    | /api/movies       | Get all movies        |
+| POST   | /api/movies       | Add a new movie       |
+| DELETE | /api/movies/:id   | Remove a movie        |
 
-💡 **Contributions & Issues**  
-Feel free to contribute by opening a pull request! If you find any bugs, report them in the **Issues** section. 🚀
+## Contribution
+Feel free to fork the repository and submit pull requests!
+
+## License
+This project is licensed under the MIT License.
 
