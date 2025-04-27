@@ -16,6 +16,7 @@ Movie Site API is a backend service built using Node.js, Express, and javaScript
 - MongoDB (if applicable)
 
 ## Folder Structure
+
 ```
 Movie-Site-API/
 ├── controllers/
